@@ -348,7 +348,7 @@ footer p {
 		position: relative;
 		width: 30px;
 		height: 20px;
-		position: relative;
+		cursor: pointer;
 		z-index: 2;
 		order: 2;
 	}

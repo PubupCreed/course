@@ -1,6 +1,10 @@
-$(document).ready(function(){
-	$('.header_burger').click(function(event){
-		$('.header_burger, .header_menu').toggleClass('active');
-		$('body').toggleClass('lock');
-	});
-});
+const $iconMenu = document.querySelector('.header_burger');
+const $menuBody = document.querySelector('.header_menu');
+
+if ($iconMenu) {
+	$iconMenu.addEventListener('click', function (e) {
+		document.body.classList.toggle('lock');
+		$iconMenu.classList.toggle('active');
+		$menuBody.classList.toggle('active');
+	})
+}
