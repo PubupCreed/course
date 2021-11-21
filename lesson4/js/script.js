@@ -7,7 +7,3 @@ let listener = function(e) {
 function move() {
   document.addEventListener('mousemove', listener);
 }
-
-function stop() {
-  document.removeEventListener('mousemove', listener);
-}
