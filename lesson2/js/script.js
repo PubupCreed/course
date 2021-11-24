@@ -1,21 +1,17 @@
-function qList() {
-	let name;
-	let age;
-	let prof;
-	let dish;
+const qList = () => {
 	let qLast;
 	cycleName: {do {
-		name = prompt('Как тебя зовут?')
-		age = prompt('Сколько тебе лет?');
-		prof = prompt('Какая тебя профессия?');
-		dish = prompt('Какое твоё любимое блюдо?')
+		let name = prompt('Как тебя зовут?')
+		let age = prompt('Сколько тебе лет?');
+		let prof = prompt('Какая тебя профессия?');
+		let dish = prompt('Какое твоё любимое блюдо?')
 		qLast = confirm(`
 		Имя: ${name},
 		Возраст: ${age},
 		Профессия: ${prof},
 		Любимое блюдо: ${dish}
 		`)
-	} while (qLast == false) {
+	} while (!qLast) {
 		break cycleName;
 	}	} return;
 }
