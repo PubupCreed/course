@@ -1,28 +1,59 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
- <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Anyway</title>
- </head>
- <body>
-    <div class="loader">
+  </head>
+  <body>
+    <div id="app">
+      <div class="forms">
+        <form name="createPostForm">
+          <div class="form-group">
+            <label for="postUserId">User id</label>
+            <input
+              class="form-control"
+              type="text"
+              id="postUserId"
+              placeholder="User ID"
+              aria-describedby="userIdHint"
+              name="userId"
+            />
+            <small id="userIdHint" class="form-text text-muted"
+              >Enter user id</small
+            >
+          </div>
+          <div class="form-group">
+            <label for="postTitle"></label>
+            <input
+              class="form-control"
+              type="text"
+              id="postTitle"
+              placeholder="Title"
+              name="title"
+            />
+          </div>
+          <div class="form-group">
+            <label for="postContent"></label>
+            <input
+              class="form-control"
+              type="text"
+              id="postContent"
+              placeholder="Content"
+              name="body"
+            />
+          </div>
+          <button id="createPostButton" class="btn">Create Post</button>
+        </form>
+      </div>
+      <button id="fetchButton">Fetch</button>
+      <button id="clearButton">Clear</button>
+      <div class="loader">
         <div class="typing_loader"></div>
+      </div>
+      <div class="list"></div>
     </div>
-     <div id='app'>
-        <button id="fetchButton">
-           Fetch
-        </button>
-        <button id="clearButton">
-         Clear
-        </button>
-
-        <div class="list">
-
-        </div>
-     </div>
-<!-- <script src="js/util.js"></script> -->
-<script type="module" src="js/main.js"></script>
- </body>
+    <script type="module" src="js/main.js"></script>
+  </body>
 </html>
